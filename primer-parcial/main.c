@@ -1,21 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "propietario.h"
-#include "automovil.h"
-#define TAMP 20
+#include "egreso.h"
+#define TAMP 100
+#define TAMA 20
+#define TAME 100
 
 int main()
 {
     ePropietario propietario[TAMP];
+    eAuto automovil[TAMA];
+    eEgresado egrecion[TAME];
     int opcion;
     int registro=-1;
+    int estacionamiento=-1;
+    int egreso=-1;
     char seguir='s';
     int altaP=-1;
     int modiP;
     int bajaP;
+    int altaA=-1;
+    int bajaE=-1;
 
     registro=inicializarPropietario(propietario,TAMP);
     altaP=inicializarPropietarioHardcode(propietario);
+
+    estacionamiento=inicializarAutomovil(automovil,TAMA);
+    altaA=inicializarAutomovilHardcode(automovil);
+
+    egreso=inicializarEgresado(egrecion,TAME);
 
     if(registro>0)
     {
@@ -85,8 +97,44 @@ int main()
                 }
                 break;
             case 5:
+                if(altaP>0 && estacionamiento>0)
+                {
+                    altaA=altaAutomovil(automovil,propietario,TAMP,TAMA);
+                    if(altaA>0)
+                    {
+                        printf("\nauto estacionado\n\n");
+                        altaA=1;
+                    }
+                    else
+                    {
+                        printf("\naccion cancelada\n\n");
+                        altaA=1;
+                    }
+                }
+                else
+                {
+                    printf("\ninicie una lista y ingrese un propietario primero\n\n");
+                }
                 break;
             case 6:
+                if(altaP>0 && altaA>0 && egreso>0)
+                {
+                    bajaE=egresarAutomovil(automovil,propietario,egrecion,TAMA,TAMP,TAME);
+                    if(bajaE>0)
+                    {
+                        printf("\negreso completo\n\n");
+                    }
+                    else
+                    {
+                        printf("\naccion cancelada\n\n");
+                    }
+                }
+                else
+                {
+                    printf("\ninicie las listar y ingrese datos primero\n\n");
+                }
+                break;
+            case 7:
                 seguir='n';
                 break;
             }

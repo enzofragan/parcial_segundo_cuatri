@@ -50,12 +50,13 @@ int menu()
     printf("2- modificacion propietario\n");
     printf("3- baja propietario\n");
     printf("4- listar\n");
-    printf("5- listar por nombre y apellido\n");
-    printf("6- salir\n");
+    printf("5- estacionar auto\n");
+    printf("6- egresar auto\n");
+    printf("7- salir\n");
 
     opcion=getInt("ingrese una opcion valida ");
 
-    while(opcion>6)
+    while(opcion>7)
     {
         printf("ingrese una opcion valida ");
         opcion=getInt("ingrese una opcion valida ");
@@ -403,8 +404,8 @@ int buscarIdPropietario(ePropietario listaP[],int tamanioP)
     int id;
     int ret=-1;
 
-    printf("ingrese el id del propietario ");
-    id=getInt("ingrese un id valido ");
+    printf("\ningrese el id del propietario ");
+    id=getInt("\ningrese un id valido ");
 
     for(i=0; i<tamanioP; i++)
     {
@@ -459,7 +460,7 @@ int modificacionPropietario(ePropietario listaP[],int tamanioP)
 
         if(respuesta=='s')
         {
-           strcpy(listaP[i].tarjeta,tarjeta);
+            strcpy(listaP[i].tarjeta,tarjeta);
             ret=1;
             mostrarPropietario(listaP[i]);
         }
@@ -528,9 +529,9 @@ int mostrarOrdenPropietario(ePropietario listaP[],int tamanioP)
     int ret=-1;
     ePropietario aux;
 
-    for(i=0;i<tamanioP-1;i++)
+    for(i=0; i<tamanioP-1; i++)
     {
-        for(j=i+1;j<tamanioP;j++)
+        for(j=i+1; j<tamanioP; j++)
         {
             if(listaP[i].estado==1 && listaP[j].estado==1)
             {

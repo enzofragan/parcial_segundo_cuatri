@@ -35,6 +35,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="automovil.h" />
+		<Unit filename="egreso.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="egreso.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

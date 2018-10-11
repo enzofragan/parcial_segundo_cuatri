@@ -9,7 +9,7 @@ typedef struct
     char direccion[20];
     char apellido[20];
     int estado;
-}ePropietario;
+} ePropietario;
 
 #endif // PROPIETARIO_H_INCLUDED
 
