@@ -33,3 +33,4 @@ int altaPropietario(ePropietario [],int );
 int buscarIdPropietario(ePropietario [],int );
 int modificacionPropietario(ePropietario [],int );
 int bajaPropietario(ePropietario [],int );
+int mostrarOrdenPropietario(ePropietario [],int );

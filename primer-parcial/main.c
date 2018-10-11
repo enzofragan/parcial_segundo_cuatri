@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "propietario.h"
+#include "automovil.h"
 #define TAMP 20
 
 int main()
@@ -76,7 +77,7 @@ int main()
             case 4:
                 if(altaP>0)
                 {
-                    mostrarListaDePropietario(propietario,TAMP);
+                    mostrarOrdenPropietario(propietario,TAMP);
                 }
                 else
                 {
@@ -84,6 +85,8 @@ int main()
                 }
                 break;
             case 5:
+                break;
+            case 6:
                 seguir='n';
                 break;
             }

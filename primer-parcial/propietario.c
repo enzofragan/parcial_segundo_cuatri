@@ -50,11 +50,12 @@ int menu()
     printf("2- modificacion propietario\n");
     printf("3- baja propietario\n");
     printf("4- listar\n");
-    printf("5- salir\n");
+    printf("5- listar por nombre y apellido\n");
+    printf("6- salir\n");
 
     opcion=getInt("ingrese una opcion valida ");
 
-    while(opcion>5)
+    while(opcion>6)
     {
         printf("ingrese una opcion valida ");
         opcion=getInt("ingrese una opcion valida ");
@@ -277,7 +278,7 @@ int esTarjeta(char* cadena)
     {
         while(cadena[i]!='\0')
         {
-            if(!(isdigit(cadena[i])) || i==16)
+            if(!(isdigit(cadena[i])) || i>=16)
             {
                 return -1;
             }
@@ -430,6 +431,8 @@ int modificacionPropietario(ePropietario listaP[],int tamanioP)
     char respuesta;
     int ret=-1;
 
+    mostrarListaDePropietario(listaP,tamanioP);
+
     i=buscarIdPropietario(listaP,tamanioP);
 
     if(i>=0)
@@ -479,6 +482,8 @@ int bajaPropietario(ePropietario listaP[],int tamanioP)
     char respuesta;
     int ret=-1;
 
+    mostrarListaDePropietario(listaP,tamanioP);
+
     i=buscarIdPropietario(listaP,tamanioP);
 
     if(i>=0)
@@ -501,7 +506,6 @@ int bajaPropietario(ePropietario listaP[],int tamanioP)
             strcpy(listaP[i].tarjeta,"");
             strcpy(listaP[i].direccion,"");
             ret=1;
-            mostrarListaDePropietario(listaP,tamanioP);
         }
         else
         {
@@ -513,6 +517,41 @@ int bajaPropietario(ePropietario listaP[],int tamanioP)
     {
         printf("\nid no encontrado\n\n");
     }
+
+    return ret;
+}
+
+int mostrarOrdenPropietario(ePropietario listaP[],int tamanioP)
+{
+    int i;
+    int j;
+    int ret=-1;
+    ePropietario aux;
+
+    for(i=0;i<tamanioP-1;i++)
+    {
+        for(j=i+1;j<tamanioP;j++)
+        {
+            if(listaP[i].estado==1 && listaP[j].estado==1)
+            {
+                if(strcmp(listaP[i].nombre,listaP[j].nombre)<0)
+                {
+                    aux=listaP[i];
+                    listaP[i]=listaP[j];
+                    listaP[j]=aux;
+                    ret=1;
+                }
+                if(strcmp(listaP[i].apellido,listaP[j].apellido)<0)
+                {
+                    aux=listaP[i];
+                    listaP[i]=listaP[j];
+                    listaP[j]=aux;
+                }
+            }
+        }
+    }
+
+    mostrarListaDePropietario(listaP,tamanioP);
 
     return ret;
 }
