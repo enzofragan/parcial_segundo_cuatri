@@ -23,7 +23,7 @@ int inicializarPropietarioHardcode(ePropietario listaP[])
     int id[5] = {1,2,3,4,5};
     char nombre[5][20] = {"enzo","luis","maria","ana","pedro"};
     char apellido[5][20] = {"fragan","mario","santos","clemente","mario"};
-    char tarjeta[5][20] = {"123456","789123","456789","159753","8624123"};
+    char tarjeta[5][20] = {"1234567891234567","7891238912345678","4567899123456789","1597531234567891","8624123456789123"};
     char direccion[5][20] = {"mitre 345","belgrano 487","mitre 357","mitre 267","belgrano 347"};
     int i;
     int ret=-1;
@@ -230,18 +230,27 @@ int esLetra(char* cadena)
 int esDomicilio(char* cadena)
 {
     int i=0;
+    int ret=-1;
     if(cadena!=NULL)
     {
         while(cadena[i]!='\0')
         {
-            if(!(isdigit(cadena[i])) && !(isalpha(cadena[i])) && !(isspace(cadena[i])))
+            if(isalpha(cadena[i]))
             {
-                return -1;
+                i++;
             }
-            i++;
+            else if(isspace(cadena[i]))
+            {
+                i++;
+            }
+            else if(isdigit(cadena[i]))
+            {
+                i++;
+                ret=1;
+            }
         }
     }
-    return 1;
+    return ret;
 }
 
 int esFecha(char* cadena)
@@ -268,7 +277,7 @@ int esTarjeta(char* cadena)
     {
         while(cadena[i]!='\0')
         {
-            if(!(isdigit(cadena[i])) || i>16)
+            if(!(isdigit(cadena[i])) || i==16)
             {
                 return -1;
             }
