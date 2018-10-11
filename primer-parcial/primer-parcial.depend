@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1539264748 source:c:\users\alumno\desktop\primer-parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"propietario.h"
+
+1539263943 c:\users\alumno\desktop\primer-parcial\propietario.h
+
+1539264600 source:c:\users\alumno\desktop\primer-parcial\propietario.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"propietario.h"
+
