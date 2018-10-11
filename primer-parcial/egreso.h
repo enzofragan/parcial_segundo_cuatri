@@ -16,7 +16,6 @@ typedef struct
 #endif // EGRESO_H_INCLUDED
 
 int inicializarEgresado(eEgresado [],int );
-int inicializarEgresadoHardcode(eEgresado []);
 int mostrarListaDeEgresado(eEgresado [], int);
 int mostrarEgresado(eEgresado );
 int buscarLibreEgresado(eEgresado [],int );

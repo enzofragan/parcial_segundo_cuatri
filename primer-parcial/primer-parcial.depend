@@ -33,14 +33,14 @@
 1539298367 c:\users\administrador\desktop\parcial_segundo_cuatri\primer-parcial\automovil.h
 	"propietario.h"
 
-1539295945 source:c:\users\administrador\desktop\parcial_segundo_cuatri\primer-parcial\propietario.c
+1539300831 source:c:\users\administrador\desktop\parcial_segundo_cuatri\primer-parcial\propietario.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<ctype.h>
 	"propietario.h"
 
-1539298367 source:c:\users\administrador\desktop\parcial_segundo_cuatri\primer-parcial\automovil.c
+1539300831 source:c:\users\administrador\desktop\parcial_segundo_cuatri\primer-parcial\automovil.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -54,7 +54,7 @@
 	<ctype.h>
 	"egreso.h"
 
-1539300831 c:\users\administrador\desktop\parcial_segundo_cuatri\primer-parcial\egreso.h
+1539300970 c:\users\administrador\desktop\parcial_segundo_cuatri\primer-parcial\egreso.h
 	"propietario.h"
 	"automovil.h"
 
