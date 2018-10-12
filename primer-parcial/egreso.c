@@ -380,6 +380,7 @@ int mostrarPropietariosConSusAutomoviles(ePropietario listaP[],eAuto listaA[],in
         int ret=-1;
         mostrarListaDePropietario(listaP,tamanioP);
         indice=buscarIdPropietario(listaP,tamanioP);
+
         if(indice!=-1)
         {
             printf("\npropietario: %s\n",listaP[indice].nombre);
@@ -418,6 +419,7 @@ int mostrarPropietarioAudi(ePropietario listaP[],eAuto listaA[],int tamanioP,int
                         flag=flag+1;
                         printf("\nid: %d\nnombre: %s\ntarjeta de credito: %s\ndireccion: %s\n\n",listaP[j].Id,listaP[j].nombre,listaP[j].tarjeta,listaP[j].direccion);
                         ret=1;
+                        break;
                     }
                 }
             }
@@ -435,6 +437,7 @@ int mostrarAutosPorPatente(ePropietario listaP[],eAuto listaA[],int tamanioP,int
         int largo;
         int i;
         int j;
+        int ret=-1;
         for(i=0; i<tamanioA-1; i++)
         {
             for(j=i+1; j<tamanioA; j++)
@@ -455,9 +458,12 @@ int mostrarAutosPorPatente(ePropietario listaP[],eAuto listaA[],int tamanioP,int
                 {
                     if(listaA[i].IdPropietario==listaP[j].Id && listaP[j].estado==1)
                     {
-                        printf("\nid: %d\npatente: %s\nmarca: %s\npropietario: %s\nid: %d\n\n",listaA[i].IdAuto,listaA[i].patente,listaA[i].marcaNombre,listaP[j].nombre,listaP[j].Id);
+                        printf("\nid: %d\npatente: %s\nmarca: %s\npropietario: %s\nid propietario: %d\n\n",listaA[i].IdAuto,listaA[i].patente,listaA[i].marcaNombre,listaP[j].nombre,listaP[j].Id);
+                        ret=1;
+                        break;
                     }
                 }
             }
         }
+    return ret;
 }
