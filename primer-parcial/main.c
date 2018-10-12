@@ -28,6 +28,7 @@ int main()
     altaA=inicializarAutomovilHardcode(automovil);
 
     egreso=inicializarEgresado(egrecion,TAME);
+    bajaE=inicializarEgresadoHardcode(egrecion);
 
     if(registro>0)
     {
@@ -71,10 +72,11 @@ int main()
             case 3:
                 if(altaP>0)
                 {
-                    bajaP=bajaPropietario(propietario,TAMP);
+                    bajaP=bajaPropietario(propietario,automovil,egrecion,TAMP,TAMA,TAME);
                     if(bajaP>0)
                     {
                         printf("\nbaja completa\n\n");
+                        bajaE=1;
                     }
                     else
                     {
@@ -133,10 +135,12 @@ int main()
                     if(bajaE>0)
                     {
                         printf("\negreso completo\n\n");
+                        bajaE=1;
                     }
                     else
                     {
                         printf("\naccion cancelada\n\n");
+                        bajaE=1;
                     }
                 }
                 else
@@ -148,6 +152,8 @@ int main()
                 if(bajaE>0)
                 {
                     mostrarListaDeEgresado(egrecion,TAME);
+
+                    mostrarRecaudaciones(egrecion,TAME);
                 }
                 else
                 {
@@ -155,6 +161,9 @@ int main()
                 }
                 break;
             case 9:
+                mostrarRecaudacionesPorMarca(egrecion,TAME);
+                break;
+            case 10:
                 seguir='n';
                 break;
             }

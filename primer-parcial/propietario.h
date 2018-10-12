@@ -178,15 +178,6 @@ int buscarIdPropietario(ePropietario [],int );
  */
 int modificacionPropietario(ePropietario [],int );
 
-/** \brief baja de propietarios, realiza baja fisica
- *
- * \param [] ePropietario lista de propietarios
- * \param int cantidad de propietarios
- * \return int retorna 1 si se logro dar de baja
- *
- */
-int bajaPropietario(ePropietario [],int );
-
 /** \brief ordena por nombre y apellido la lista de propietarios
  *
  * \param [] ePropietario lista de propietarios

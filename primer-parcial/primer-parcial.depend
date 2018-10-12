@@ -58,3 +58,38 @@
 	"propietario.h"
 	"automovil.h"
 
+1539344853 source:c:\users\alumno\desktop\parcial_segundo_cuatri\primer-parcial\automovil.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"automovil.h"
+
+1539344853 c:\users\alumno\desktop\parcial_segundo_cuatri\primer-parcial\automovil.h
+	"propietario.h"
+
+1539345651 c:\users\alumno\desktop\parcial_segundo_cuatri\primer-parcial\propietario.h
+
+1539349093 source:c:\users\alumno\desktop\parcial_segundo_cuatri\primer-parcial\egreso.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"egreso.h"
+
+1539347443 c:\users\alumno\desktop\parcial_segundo_cuatri\primer-parcial\egreso.h
+	"propietario.h"
+	"automovil.h"
+
+1539349003 source:c:\users\alumno\desktop\parcial_segundo_cuatri\primer-parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"egreso.h"
+
+1539347653 source:c:\users\alumno\desktop\parcial_segundo_cuatri\primer-parcial\propietario.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"propietario.h"
+

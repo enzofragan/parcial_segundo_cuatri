@@ -49,16 +49,17 @@ int menu()
     printf("1- alta propietario\n");
     printf("2- modificacion propietario\n");
     printf("3- baja propietario\n");
-    printf("4- listar\n");
+    printf("4- listar propietarios\n");
     printf("5- estacionar auto\n");
-    printf("6- lista autos\n");
+    printf("6- listar autos\n");
     printf("7- egresar auto\n");
-    printf("8- lista egresados\n");
-    printf("9- salir\n");
+    printf("8- listar egresados y recaudacion total\n");
+    printf("9- listar recaudaciones por marca\n");
+    printf("10- salir\n");
 
     opcion=getInt("ingrese una opcion valida ");
 
-    while(opcion>9)
+    while(opcion>10)
     {
         printf("ingrese una opcion valida ");
         opcion=getInt("ingrese una opcion valida ");
@@ -424,51 +425,6 @@ int modificacionPropietario(ePropietario listaP[],int tamanioP)
         {
             ret=0;
         }
-    }
-    else
-    {
-        printf("\nid no encontrado\n\n");
-    }
-
-    return ret;
-}
-
-int bajaPropietario(ePropietario listaP[],int tamanioP)
-{
-    int i;
-    char respuesta;
-    int ret=-1;
-
-    mostrarListaDePropietario(listaP,tamanioP);
-
-    i=buscarIdPropietario(listaP,tamanioP);
-
-    if(i>=0)
-    {
-        mostrarPropietario(listaP[i]);
-
-        respuesta=getChar("desea eliminar este propietario? s/n ","ingrese una opcion valida ");
-
-        while(respuesta!='s' && respuesta!='n')
-        {
-            respuesta=getChar("ingrese una opcion valida ","ingrese una opcion valida ");
-        }
-
-        if(respuesta=='s')
-        {
-            listaP[i].estado=0;
-            listaP[i].Id=0;
-            strcpy(listaP[i].nombre,"");
-            strcpy(listaP[i].apellido,"");
-            strcpy(listaP[i].tarjeta,"");
-            strcpy(listaP[i].direccion,"");
-            ret=1;
-        }
-        else
-        {
-            ret=0;
-        }
-
     }
     else
     {

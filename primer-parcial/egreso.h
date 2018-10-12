@@ -10,6 +10,7 @@ typedef struct
     int idAutomovil;
     int horas;
     int marca;
+    float recaudaciones;
     int estado;
 } eEgresado;
 
@@ -78,3 +79,11 @@ int egresarAutomovil(eAuto [],ePropietario [],eEgresado [],int,int,int );
  *
  */
 int devolverHorasEstadia();
+
+int bajaPropietario(ePropietario [],eAuto [],eEgresado [],int ,int ,int );
+
+int mostrarRecaudaciones(eEgresado [],int );
+
+int inicializarEgresadoHardcode(eEgresado []);
+
+int mostrarRecaudacionesPorMarca(eEgresado [],int );
