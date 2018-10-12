@@ -117,6 +117,16 @@ int main()
                 }
                 break;
             case 6:
+                if(altaA>0)
+                {
+                    mostrarListaDeAutomovil(automovil,TAMA);
+                }
+                else
+                {
+                    printf("\ninicie una lista primero\n\n");
+                }
+                break;
+            case 7:
                 if(altaP>0 && altaA>0 && egreso>0)
                 {
                     bajaE=egresarAutomovil(automovil,propietario,egrecion,TAMA,TAMP,TAME);
@@ -134,7 +144,17 @@ int main()
                     printf("\ninicie las listar y ingrese datos primero\n\n");
                 }
                 break;
-            case 7:
+            case 8:
+                if(bajaE>0)
+                {
+                    mostrarListaDeEgresado(egrecion,TAME);
+                }
+                else
+                {
+                    printf("\ninicie una lista primero\n\n");
+                }
+                break;
+            case 9:
                 seguir='n';
                 break;
             }

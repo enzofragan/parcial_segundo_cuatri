@@ -23,17 +23,17 @@
 
 1539268228 c:\users\alumno\desktop\primer-parcial\automovil.h
 
-1539300779 source:c:\users\administrador\desktop\parcial_segundo_cuatri\primer-parcial\main.c
+1539307036 source:c:\users\administrador\desktop\parcial_segundo_cuatri\primer-parcial\main.c
 	<stdio.h>
 	<stdlib.h>
 	"egreso.h"
 
-1539300831 c:\users\administrador\desktop\parcial_segundo_cuatri\primer-parcial\propietario.h
+1539304936 c:\users\administrador\desktop\parcial_segundo_cuatri\primer-parcial\propietario.h
 
-1539298367 c:\users\administrador\desktop\parcial_segundo_cuatri\primer-parcial\automovil.h
+1539305528 c:\users\administrador\desktop\parcial_segundo_cuatri\primer-parcial\automovil.h
 	"propietario.h"
 
-1539300831 source:c:\users\administrador\desktop\parcial_segundo_cuatri\primer-parcial\propietario.c
+1539306505 source:c:\users\administrador\desktop\parcial_segundo_cuatri\primer-parcial\propietario.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -47,14 +47,14 @@
 	<ctype.h>
 	"automovil.h"
 
-1539300665 source:c:\users\administrador\desktop\parcial_segundo_cuatri\primer-parcial\egreso.c
+1539308157 source:c:\users\administrador\desktop\parcial_segundo_cuatri\primer-parcial\egreso.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<ctype.h>
 	"egreso.h"
 
-1539300970 c:\users\administrador\desktop\parcial_segundo_cuatri\primer-parcial\egreso.h
+1539308157 c:\users\administrador\desktop\parcial_segundo_cuatri\primer-parcial\egreso.h
 	"propietario.h"
 	"automovil.h"
 

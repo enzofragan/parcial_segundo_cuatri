@@ -51,12 +51,14 @@ int menu()
     printf("3- baja propietario\n");
     printf("4- listar\n");
     printf("5- estacionar auto\n");
-    printf("6- egresar auto\n");
-    printf("7- salir\n");
+    printf("6- lista autos\n");
+    printf("7- egresar auto\n");
+    printf("8- lista egresados\n");
+    printf("9- salir\n");
 
     opcion=getInt("ingrese una opcion valida ");
 
-    while(opcion>7)
+    while(opcion>9)
     {
         printf("ingrese una opcion valida ");
         opcion=getInt("ingrese una opcion valida ");
@@ -65,12 +67,6 @@ int menu()
     return opcion;
 }
 
-/** \brief el get para los numeros enteros, el proceso es el mismo que en de decimal y si es un numero pasa el buffer a int
- *
- * \param error[] char se le pasa el mensaje de error en caso de que la validacion falle
- * \return int si es un numero primero pasa la cadena a int y luego lo retorna
- *
- */
 int getInt(char error[])
 {
     int aux;
@@ -86,14 +82,6 @@ int getInt(char error[])
     return aux;
 }
 
-/** \brief get para cadena de caracteres, el proceso es el mismo que los demas, con la diferencia de que se le pasa la variable por parametro
- *
- * \param mensaje[] char mensaje a imprimir
- * \param error[] char mensaje de error
- * \param caracter[] char varible que guarda lo que se quiera ingrasar y luego se valida
- * \return char retorna lo ingresado
- *
- */
 char getString(char mensaje[],char error[],char caracter[])
 {
     printf("%s",mensaje);
@@ -110,13 +98,6 @@ char getString(char mensaje[],char error[],char caracter[])
     return caracter;
 }
 
-/** \brief obtiene el decimal a ingresar y lo pasa a string y lo valida
- *
- * \param mensaje[] char se le pasa el mensaje a utilizar
- * \param error[] char y el mensaje de error en caso de que la validacion falle
- * \return float retorna el numero pasado de string a float
- *
- */
 float getDec(char mensaje[],char error[])
 {
     float aux;
@@ -136,13 +117,6 @@ float getDec(char mensaje[],char error[])
     return aux;
 }
 
-/** \brief el get para los caracteres y es el mismo proceso que los otros dos
- *
- * \param mensaje[] char se le pasa el mensaje a utilizar
- * \param error[] char y el mensaje de error por si la validacion falla
- * \return char si es un char pasa el buffer a un auxiliar y lo retorna
- *
- */
 char getChar(char mensaje[],char error[])
 {
     char auxiliar;
@@ -160,12 +134,6 @@ char getChar(char mensaje[],char error[])
     return auxiliar;
 }
 
-/** \brief validacion para saber si el numero es decimal o si es un numero o letra
- *
- * \param cadena char* se el pasa el puntero a la cadena pasada en el get y lo recorre para verificar que se un numero o sea un numero decimal
- * \return int retorna -1 si es una letra y 1 si es un numero
- *
- */
 int esDecimal(char* cadena)
 {
     int i=0;
@@ -183,12 +151,6 @@ int esDecimal(char* cadena)
     return 1;
 }
 
-/** \brief validacion para los numeros enteros
- *
- * \param cadena char* se le pasa la cadena del get y la recorre
- * \return int devuelve -1 si es una letra y 1 si es un numero
- *
- */
 int esNumerica(char* cadena)
 {
     int i=0;
@@ -206,12 +168,6 @@ int esNumerica(char* cadena)
     return 1;
 }
 
-/** \brief validacion para las letras
- *
- * \param cadena char* se le pasa la cadena del get, para que la recorra
- * \return int retorna -1 si es un numero y 1 si es una letra
- *
- */
 int esLetra(char* cadena)
 {
     int i=0;
