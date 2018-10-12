@@ -10,7 +10,8 @@ typedef struct
     int idAutomovil;
     int horas;
     int marca;
-    float recaudaciones;
+    char marcaNombre[10];
+    int recaudaciones;
     int estado;
 } eEgresado;
 
@@ -80,10 +81,16 @@ int egresarAutomovil(eAuto [],ePropietario [],eEgresado [],int,int,int );
  */
 int devolverHorasEstadia();
 
-int bajaPropietario(ePropietario [],eAuto [],eEgresado [],int ,int ,int );
+int bajaPropietario(ePropietario [],eAuto [],eEgresado [],int,int,int );
 
 int mostrarRecaudaciones(eEgresado [],int );
 
 int inicializarEgresadoHardcode(eEgresado []);
 
 int mostrarRecaudacionesPorMarca(eEgresado [],int );
+
+int mostrarPropietariosConSusAutomoviles(ePropietario [],eAuto [],int ,int );
+
+int mostrarPropietarioAudi(ePropietario [],eAuto [],int ,int );
+
+int mostrarAutosPorPatente(ePropietario [],eAuto [],int ,int );

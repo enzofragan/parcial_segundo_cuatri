@@ -55,11 +55,14 @@ int menu()
     printf("7- egresar auto\n");
     printf("8- listar egresados y recaudacion total\n");
     printf("9- listar recaudaciones por marca\n");
-    printf("10- salir\n");
+    printf("10- listar propietarios con sus autos\n");
+    printf("11- listar propietarios por marca AUDI\n");
+    printf("12- listar autos ordenados por patente\n");
+    printf("13- salir\n");
 
     opcion=getInt("ingrese una opcion valida ");
 
-    while(opcion>10)
+    while(opcion>13)
     {
         printf("ingrese una opcion valida ");
         opcion=getInt("ingrese una opcion valida ");

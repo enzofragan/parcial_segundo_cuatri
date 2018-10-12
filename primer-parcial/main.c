@@ -164,6 +164,36 @@ int main()
                 mostrarRecaudacionesPorMarca(egrecion,TAME);
                 break;
             case 10:
+                if(altaP>0 && altaA>0)
+                {
+                    mostrarPropietariosConSusAutomoviles(propietario,automovil,TAMP,TAMA);
+                }
+                else
+                {
+                    printf("\ninicie las listar y ingrese datos primero\n\n");
+                }
+                break;
+            case 11:
+                if(altaP>0 && altaA>0)
+                {
+                    mostrarPropietarioAudi(propietario,automovil,TAMP,TAMA);
+                }
+                else
+                {
+                    printf("\ninicie las listar y ingrese datos primero\n\n");
+                }
+                break;
+            case 12:
+                if(altaP>0 && altaA>0)
+                {
+                    mostrarAutosPorPatente(propietario,automovil,TAMP,TAMA);
+                }
+                else
+                {
+                    printf("\ninicie las listar y ingrese datos primero\n\n");
+                }
+                break;
+            case 13:
                 seguir='n';
                 break;
             }

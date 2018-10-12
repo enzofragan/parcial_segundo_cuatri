@@ -26,9 +26,9 @@ int inicializarAutomovilHardcode(eAuto listaA[])
 {
     int id[5] = {10,11,12,13,14};
     int idPropietari[5] = {1,4,3,3,5};
-    char patente[5][8] = {"abc-123","dfg-456","hij-789","klm-156","nop-357"};
-    char marcaNombre[5][20] = {"ALPHA_ROMEO","AUDI","ALPHA_ROMEO","OTRO","FERRARI"};
-    int marca[5] = {1,3,1,4,2};
+    char patente[5][8] = {"abc-123","nfg-456","hij-789","alm-156","nop-357"};
+    char marcaNombre[5][20] = {"ALPHA_ROMEO","AUDI","ALPHA_ROMEO","OTRO","AUDI"};
+    int marca[5] = {1,3,1,4,3};
     int i;
     int ret=-1;
 
@@ -171,7 +171,7 @@ int altaAutomovil(eAuto listaA[],ePropietario listaP[],int tamanioP,int tamanioA
                 break;
             }
 
-            printf("\ningrese la patente ");
+            printf("\ningrese la patente abc-000 ");
             fflush(stdin);
             gets(patente);
 
